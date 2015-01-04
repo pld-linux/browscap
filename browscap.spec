@@ -1,11 +1,12 @@
 Summary:	PHP browscap file
 Name:		browscap
-Version:	5009
+Version:	5037
 Release:	1
-License:	Freeware
+License:	BSD
 Group:		Applications/Text
 URL:		http://browscap.org/
-Source0:	php_%{name}.ini
+Source0:	http://browscap.org/stream?q=PHP_BrowsCapINI&/php_%{name}.ini
+# Source0-md5:	b6d0f7f293460e84ff1189cc65c58eab
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -17,11 +18,12 @@ maps browser capabilities to the HTTP User Agent header.
 
 %prep
 %setup -qcT
+cp -p %{SOURCE0} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
-cp -p %{SOURCE0} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -p *.ini $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
