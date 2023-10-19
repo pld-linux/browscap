@@ -1,12 +1,12 @@
 Summary:	PHP browscap file
 Name:		browscap
-Version:	5037
+Version:	6001005
 Release:	1
 License:	BSD
 Group:		Applications/Text
 URL:		http://browscap.org/
 Source0:	http://browscap.org/stream?q=PHP_BrowsCapINI&/php_%{name}.ini
-# Source0-md5:	b6d0f7f293460e84ff1189cc65c58eab
+# Source0-md5:	4c49aeeee8a4dfad9f11f54204dc8973
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
